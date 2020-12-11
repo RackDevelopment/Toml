@@ -1,0 +1,16 @@
+[long-values]
+wheels = 4
+windows = 25
+houses = 2
+citizens = 57_406_225
+
+[double-values]
+speed = 5.75
+acceleration = 0.27
+gamma = 50.0
+pi = 3.14159
+
+[array]
+names = ["Beatrice", "Dante", "Guido", "Lapo"]
+ages = [34, 56, 42, 45]
+height = [1.76, 1.81, 1.75, 1.74]
