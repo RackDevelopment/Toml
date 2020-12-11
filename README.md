@@ -1,2 +1,4 @@
 # ViperTomlConfig
+[![GitHub license](https://img.shields.io/github/license/TheViperShow/ViperTomlConfig)](https://github.com/TheViperShow/ViperTomlConfig/blob/main/LICENSE) [![GitHub stars](https://img.shields.io/github/stars/TheViperShow/ViperTomlConfig)](https://github.com/TheViperShow/ViperTomlConfig/stargazers) [![GitHub forks](https://img.shields.io/github/forks/TheViperShow/ViperTomlConfig)](https://github.com/TheViperShow/ViperTomlConfig/network) [![GitHub issues](https://img.shields.io/github/issues/TheViperShow/ViperTomlConfig)](https://github.com/TheViperShow/ViperTomlConfig/issues) ![GitHub repo size](https://img.shields.io/github/repo-size/TheViperShow/ViperTomlConfig) ![Lines of code](https://img.shields.io/tokei/lines/github/TheViperShow/ViperTomlConfig)
+<br>
 Viper Toml Configs for Spigot plugins
