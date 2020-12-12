@@ -24,10 +24,11 @@ public final class PluginsConfigurationsManager {
 
     /**
      * This method loads your configurations data using a config list enum.
-     * @param yourPlugin Your plugin instance.
+     *
+     * @param yourPlugin  Your plugin instance.
      * @param configsEnum Your class listing all of the registered configs.
-     * @param <P> Your plugin type.
-     * @param <T> The enum config type.
+     * @param <P>         Your plugin type.
+     * @param <T>         The enum config type.
      */
     public final <P extends JavaPlugin, T extends Enum<T> & ClassHolder<? extends TomlSectionConfiguration<P, ?>>> void loadPluginData(@NotNull P yourPlugin, @NotNull Class<T> configsEnum) {
         var pluginData = new PluginConfigurationsData<P>(Objects.requireNonNull(yourPlugin, "Your plugin instance was null!"));
@@ -37,8 +38,9 @@ public final class PluginsConfigurationsManager {
 
     /**
      * Get your registered plugin configs data.
+     *
      * @param yourPlugin Your plugin instance.
-     * @param <P> The type of your plugin.
+     * @param <P>        The type of your plugin.
      * @return Your data if loaded, null otherwise.
      */
     @Nullable

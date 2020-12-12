@@ -12,6 +12,7 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Your plugin configurations data.
  * MUST BE ANNOTATED WITH YOUR MAIN PLUGIN TYPE.
+ *
  * @param <P> Your plugin type.
  */
 @RequiredArgsConstructor
@@ -22,10 +23,12 @@ public final class PluginConfigurationsData<P extends JavaPlugin> {
     private final Map<ClassHolder<? extends TomlSectionConfiguration<P, ?>>, TomlSectionConfiguration<P, ?>> loadedTomlConfigs = new HashMap<>();
 
     /**
+     * Load all of the configurations from an enum class
+     * that contains all of the available configurations.
      *
-     * @param enumClass
-     * @param javaPlugin
-     * @param <T>
+     * @param enumClass  The class for the enum.
+     * @param javaPlugin Your plugin instance.
+     * @param <T>        The type of your plugin.
      */
     public final <T extends Enum<T> & ClassHolder<? extends TomlSectionConfiguration<P, ?>>> void loadAllConfigs(@NotNull Class<T> enumClass, @NotNull P javaPlugin) {
         var logger = javaPlugin.getLogger();
@@ -48,11 +51,14 @@ public final class PluginConfigurationsData<P extends JavaPlugin> {
     }
 
     /**
+     * Get the configuration file from the loaded data.
+     * The method may return null if you haven't loaded
+     * that specific configuration.
      *
-     * @param sectionEnum
-     * @param <T>
-     * @param <S>
-     * @return
+     * @param sectionEnum The config enum entry.
+     * @param <T>         The Section type.
+     * @param <S>         .
+     * @return The config if found or null.
      */
     @Nullable
     public final <T extends TomlSectionConfiguration<P, ?>, S extends Enum<S> & ClassHolder<? extends TomlSectionConfiguration<P, ?>>> T getConfig(@NotNull S sectionEnum) {
