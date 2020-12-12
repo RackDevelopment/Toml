@@ -30,7 +30,7 @@ public final class PluginConfigurationsData<P extends JavaPlugin> {
      * @param javaPlugin Your plugin instance.
      * @param <T>        The type of your plugin.
      */
-    public final <T extends Enum<T> & ClassHolder<? extends TomlSectionConfiguration<P, ?>>> void loadAllConfigs(@NotNull Class<T> enumClass, @NotNull P javaPlugin) {
+    public final <T extends Enum<T> & ClassHolder<? extends TomlSectionConfiguration<P, ?>>> void loadAllConfigs(@NotNull Class<? extends T> enumClass, @NotNull P javaPlugin) {
         var logger = javaPlugin.getLogger();
 
         for (final T configTypes : enumClass.getEnumConstants()) {
