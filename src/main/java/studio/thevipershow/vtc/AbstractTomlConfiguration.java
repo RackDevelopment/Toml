@@ -28,7 +28,7 @@ public abstract class AbstractTomlConfiguration<T extends JavaPlugin> extends Ab
             throw new IllegalArgumentException(String.format("The file at location %s did not exist.", file.getAbsolutePath()));
         } else if (!file.canRead()) {
             throw new IllegalArgumentException(String.format("The file at location %s could not be read.", file.getAbsolutePath()));
-        } else if (!file.isDirectory()) {
+        } else if (file.isDirectory()) {
             throw new IllegalArgumentException(String.format("The file at location %s should not have been a directory.", file.getAbsolutePath()));
         } else if (!file.getName().endsWith(".toml")) {
             throw new IllegalArgumentException(String.format("The file at location %s should have been a TOML file.", file.getAbsolutePath()));
