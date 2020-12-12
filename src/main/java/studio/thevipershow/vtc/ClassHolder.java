@@ -5,8 +5,6 @@ import org.jetbrains.annotations.NotNull;
 /**
  * This interface represents a partially generic data holder.
  * It will return a class reference of generic type.
- *
- *
  */
 @FunctionalInterface
 public interface ClassHolder<T> {
@@ -19,5 +17,5 @@ public interface ClassHolder<T> {
      *
      * @return The data.
      */
-    @NotNull Class<T> getClassData();
+    @NotNull Class<? extends T> getClassData();
 }
