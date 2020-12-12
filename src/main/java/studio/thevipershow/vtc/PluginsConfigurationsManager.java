@@ -30,7 +30,7 @@ public final class PluginsConfigurationsManager {
      * @param <P>         Your plugin type.
      * @param <T>         The enum config type.
      */
-    public final <P extends JavaPlugin, T extends Enum<T> & ClassHolder<? extends TomlSectionConfiguration<P, ?>>> void loadPluginData(@NotNull P yourPlugin, @NotNull Class<T> configsEnum) {
+    public final <P extends JavaPlugin, T extends Enum<T> & ConfigurationEntryAndType> void loadPluginData(@NotNull P yourPlugin, @NotNull Class<T> configsEnum) {
         var pluginData = new PluginConfigurationsData<P>(Objects.requireNonNull(yourPlugin, "Your plugin instance was null!"));
         pluginData.loadAllConfigs(configsEnum, yourPlugin);
         this.pluginConfigDataMap.put(yourPlugin, pluginData);

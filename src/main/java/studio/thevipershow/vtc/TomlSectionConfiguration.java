@@ -15,7 +15,7 @@ import org.jetbrains.annotations.NotNull;
  * @param <T> Your plugin type.
  * @param <S> The enum type with all of your config sections.
  */
-public abstract class TomlSectionConfiguration<T extends JavaPlugin, S extends Enum<S> & ConfigurationEntryAndType<?>> extends AbstractTomlConfiguration<T> implements ValuesLoader<S> {
+public abstract class TomlSectionConfiguration<T extends JavaPlugin, S extends Enum<S> & ConfigurationEntryAndType> extends AbstractTomlConfiguration<T> implements ValuesLoader<S> {
 
     protected final Class<S> enumTypeClass;
     protected final EnumSet<S> enumClassValues;
